@@ -54,12 +54,13 @@ nav{
 
 .slider{
     background: url("https://img.freepik.com/free-vector/abstract-black-texture-background-hexagon_206725-413.jpg?w=996&t=st=1720510513~exp=1720511113~hmac=18b29cc99c03f4a5bf64010f3f25c739f8928d74a2e0ae43439cf696511a9fda");
-    /* clip-path: polygon(0 0, 100% 0, 100% 81%, 0 100%); */
+     clip-path: polygon(0 0, 100% 0, 100% 81%, 0 100%); 
 }
 
 .sliderWrapper{
     display: flex;
     width: 500vw;
+    transition: all 1.5s ease-in-out;
 }
 
 .sliderItem{
@@ -70,10 +71,87 @@ nav{
     position: relative;
 }
 
+.sliderBg{
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    position: absolute;
+    
+}
+
+.sliderImg{
+    z-index: 1;
+}
+
 .sliderTitle{
     position: absolute;
     top: 10%;
     right: 15%;
     font-size: 50px;
+    font-weight: 900;
+    text-align: center;
     color: white;
+    z-index: 1;
 }
+
+.sliderPrice{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    font-size: 60px;
+    font-weight: 100;
+    text-align: center;
+    color: white;
+    border: 1px solid gray;
+}
+
+.buyButton{
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    font-size: 20px;
+    font-weight: 100;
+    color: white;
+    border: 1px solid gray;
+    background-color: black;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.buyButton:hover{
+    background-color: white;
+    color: #111;
+}
+
+.sliderItem:nth-child(1) .sliderBg{
+    background-color: blue;
+}
+.sliderItem:nth-child(2) .sliderBg{
+    background-color: purple;
+}
+.sliderItem:nth-child(3) .sliderBg{
+    background-color: #00ff88;
+}
+.sliderItem:nth-child(4) .sliderBg{
+    background-color: #ff0000;
+}
+.sliderItem:nth-child(5) .sliderBg{
+    background-color: #fffb00;
+}
+
+.sliderItem:nth-child(1) .sliderPrice{
+    background-color: blue;
+}
+.sliderItem:nth-child(2) .sliderPrice{
+    background-color: purple;
+}
+.sliderItem:nth-child(3) .sliderPrice{
+    background-color: #00ff2a;
+}
+.sliderItem:nth-child(4) .sliderPrice{
+    background-color: #ff0000;
+}
+.sliderItem:nth-child(5) .sliderPrice{
+    background-color: #ffe600;
+}
+
